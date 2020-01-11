@@ -6,7 +6,7 @@ public class WebDriverFactory {
 	
 	
 	//public static WebDriver dr;
-	private static ThreadLocal <WebDriver> threadLevelStorage=new ThreadLocal<>();
+	private static ThreadLocal <WebDriver> threadLevelStorage=new ThreadLocal<WebDriver>();
 	
 	//ThreadLocal is variable of data type WebDrier <Data type>
 	
