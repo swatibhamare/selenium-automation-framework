@@ -3,6 +3,8 @@ package com.orangehrm.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.orangehrm.common.WebDriverFactory;
@@ -22,6 +24,8 @@ public class LoginPage {
 	@FindBy (id = "spanMessage")
 	WebElement spanText;
 	
+	//WebDriver wait;
+	WebDriverWait wait = new WebDriverWait(WebDriverFactory.getWebDriver(), 30);
 	
 	public LoginPage()
 	{
@@ -57,5 +61,12 @@ public class LoginPage {
 	}
 	
 	
+	public LoginPage IsPageLoaded()
 	
+	{   wait.until(ExpectedConditions.elementToBeClickable(loginbtn));
+	    wait.until(ExpectedConditions.elementToBeClickable(username));
+	    wait.until(ExpectedConditions.elementToBeClickable(password));
+		return this;
+		
+	}
 }
