@@ -17,10 +17,10 @@ public class AddUserTest extends BaseSelenium {
 		
 		LoginPage lp = new LoginPage();
 		
-		lp.login("swati", "Test_123")
-			.verifyWelcome("Welcome Admin")
-				.clickonAdminbtn()
-					.clickonAddbtn()
+		lp.IsPageLoaded().login("swati", "Test_123")
+		    .IsPageLoaded().verifyWelcome("Welcome Admin")
+		      .IsPageLoaded().clickonAdminbtn()
+				 .clickonAddbtn()
 						.addUser("Admin", "Swati", "User123","Password_123","Password_123");
 	}
 	

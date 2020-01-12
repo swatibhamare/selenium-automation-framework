@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.orangehrm.common.WebDriverFactory;
 
@@ -27,6 +28,7 @@ public class AddUserPage {
 	@FindBy(name ="systemUser[userType]")
 	WebElement saveButton;
 	
+	WebDriverWait wait = new WebDriverWait(WebDriverFactory.getWebDriver(), 30);
 	
 	public AddUserPage()
 	
@@ -51,4 +53,5 @@ public class AddUserPage {
 		return new AdminPage();
 	}	
 	
+
 }
