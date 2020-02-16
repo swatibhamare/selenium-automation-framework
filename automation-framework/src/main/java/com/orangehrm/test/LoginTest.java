@@ -12,7 +12,7 @@ public class LoginTest extends BaseSelenium{
 	
 	{	
 		LoginPage lpage = new LoginPage();//default constructor
-		lpage.IsPageLoaded().login("swati", "Test_123");
+		lpage.IsPageLoaded().login("swati", "Test_123")
 		//lpage.login("swati", "Test_123")
 			.verifyWelcome("Welcome Admin");
 	}
